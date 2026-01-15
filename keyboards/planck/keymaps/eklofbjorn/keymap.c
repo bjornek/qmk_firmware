@@ -17,8 +17,8 @@
 #include QMK_KEYBOARD_H
 #include "keymap_swedish.h"
 
-#define BILATERAL_COMBINATIONS
-//#define TAPPING_TERM 300
+#define FLOW_TAP_TERM 150
+#define TAPPING_TERM 300
 
 #ifdef AUDIO_ENABLE
 #    include "muse.h"
@@ -66,7 +66,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  SE_Q,    SE_W,    SE_E,    SE_R,   SE_T,      SE_Y,    SE_U,   SE_I,    SE_O,    SE_P,      SE_ARNG,
     KC_TAB,  SE_A,    MT_S,    MT_D,    MT_F,   MT_G,      MT_H,    MT_J,   MT_K,    MT_L,    SE_ODIA,   SE_ADIA,
     KC_DEL,  SE_Z,    SE_X,    SE_C,    SE_V,   SE_B,      SE_N,    SE_M,   SE_COMM, SE_DOT,  SE_MINS,   SE_QUOT,
-    KC_BSPC, KC_NO,   KC_NO,   LOWER,   NAVSPC, NAVSPC,    MT_ENT,  MT_ENT, RAISE,   KC_NO,   SE_BSLS,   SE_ASTR 
+    KC_BSPC, KC_NO,   KC_NO,   LOWER,   NAVSPC, NAVSPC,    MT_ENT,  MT_ENT, RAISE,   KC_NO,   SE_BSLS,   SE_ASTR
 ),
 
 /* Colemak
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
- 
+
 [_COLEMAK] = LAYOUT_planck_grid(
     KC_TAB,  KC_Q,    KC_W,    KC_F,    KC_P,    KC_G,    KC_J,    KC_L,    KC_U,    KC_Y,    KC_SCLN, KC_BSPC,
     KC_ESC,  KC_A,    KC_R,    KC_S,    KC_T,    KC_D,    KC_H,    KC_N,    KC_E,    KC_I,    KC_O,    KC_QUOT,
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Brite| Ctrl | Alt  | GUI  |Lower |    Space    |Raise | Left | Down |  Up  |Right |
  * `-----------------------------------------------------------------------------------'
- 
+
 [_DVORAK] = LAYOUT_planck_grid(
     KC_TAB,  KC_QUOT, KC_COMM, KC_DOT,  KC_P,    KC_Y,    KC_F,    KC_G,    KC_C,    KC_R,    KC_L,    KC_BSPC,
     KC_ESC,  KC_A,    KC_O,    KC_E,    KC_U,    KC_I,    KC_D,    KC_H,    KC_T,    KC_N,    KC_S,    KC_SLSH,
@@ -139,7 +139,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * | Exit |      |      |   A  |   O  |             |   E  |   U  |      |      |      |
  * `-----------------------------------------------------------------------------------'
- 
+
 [_PLOVER] = LAYOUT_planck_grid(
     KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1,    KC_1   ,
     XXXXXXX, KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_LBRC,

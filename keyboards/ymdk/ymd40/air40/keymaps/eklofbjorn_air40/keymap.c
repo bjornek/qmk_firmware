@@ -14,8 +14,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
+#define FLOW_TAP_TERM 150
 #define TAPPING_TERM 300
-#define BILATERAL_COMBINATIONS
 
 #include QMK_KEYBOARD_H
 #include "keymap_swedish.h"
@@ -47,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_ESC,  SE_Q,    SE_W,    SE_E,    SE_R,   SE_T,      SE_Y,    SE_U,   SE_I,    SE_O,    SE_P,      SE_ARNG,
     KC_TAB,  SE_A,    MT_S,    MT_D,    MT_F,   MT_G,      MT_H,    MT_J,   MT_K,    MT_L,    SE_ODIA,   SE_ADIA,
     KC_DEL,  SE_Z,    SE_X,    SE_C,    SE_V,   SE_B,      SE_N,    SE_M,   SE_COMM, SE_DOT,  SE_MINS,   SE_QUOT,
-    KC_BSPC, KC_NO,   KC_NO,   LOWER,   NAVSPC, NAVSPC,    MT_ENT,  MT_ENT, RAISE,   KC_NO,   SE_BSLS,   SE_ASTR 
+    KC_BSPC, KC_NO,   KC_NO,   LOWER,   NAVSPC, NAVSPC,    MT_ENT,  MT_ENT, RAISE,   KC_NO,   SE_BSLS,   SE_ASTR
 ),
 
 [_RAISE] = LAYOUT_ortho_4x12(
@@ -75,7 +75,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * ,-----------------------------------------------------------------------------------.
  * |      | Reset|      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
- * |      |      |      |      |      |      |      |      |      |      |      |      |  
+ * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
  * |      |      |      |      |      |      |      |      |      |      |      |      |
  * |------+------+------+------+------+------+------+------+------+------+------+------|
@@ -83,9 +83,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * `-----------------------------------------------------------------------------------'
  */
 [_ADJUST] = LAYOUT_ortho_4x12(
-    KC_NO,   QK_BOOT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO, 
-    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,    
-    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   
+    KC_NO,   QK_BOOT, KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
+    KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,
     KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO,   KC_NO
 )
 
