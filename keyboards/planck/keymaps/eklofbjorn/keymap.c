@@ -17,9 +17,6 @@
 #include QMK_KEYBOARD_H
 #include "keymap_swedish.h"
 
-#define FLOW_TAP_TERM 150
-#define TAPPING_TERM 300
-
 #ifdef AUDIO_ENABLE
 #    include "muse.h"
 #endif
