@@ -16,6 +16,7 @@
 
 #define FLOW_TAP_TERM 150
 #define TAPPING_TERM 300
+//#define BILATERAL_COMBINATIONS
 
 #include QMK_KEYBOARD_H
 #include "keymap_swedish.h"
@@ -36,10 +37,10 @@ enum layer_names {
 #define MT_D MT(MOD_LGUI, SE_D)
 #define MT_F MT(MOD_LCTL, SE_F)
 #define MT_G MT(MOD_LSFT, SE_G)
-#define MT_H MT(MOD_LSFT, SE_H)
-#define MT_J MT(MOD_LCTL, SE_J)
-#define MT_K MT(MOD_LGUI, SE_K)
-#define MT_L MT(MOD_LALT, SE_L)
+#define MT_H MT(MOD_RSFT, SE_H)
+#define MT_J MT(MOD_RCTL, SE_J)
+#define MT_K MT(MOD_RGUI, SE_K)
+#define MT_L MT(MOD_RALT, SE_L)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
