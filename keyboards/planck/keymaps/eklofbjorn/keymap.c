@@ -42,14 +42,14 @@ enum planck_keycodes {
 #define RAISE MO(_RAISE)
 #define NAVSPC LT(_NAVIG, KC_SPC)
 #define MT_ENT MT(MOD_LSFT, KC_ENT)
-#define MT_S MT(MOD_LALT, SE_S)
-#define MT_D MT(MOD_LGUI, SE_D)
-#define MT_F MT(MOD_LCTL, SE_F)
-#define MT_G MT(MOD_LSFT, SE_G)
-#define MT_H MT(MOD_RSFT, SE_H)
-#define MT_J MT(MOD_RCTL, SE_J)
-#define MT_K MT(MOD_RGUI, SE_K)
-#define MT_L MT(MOD_RALT, SE_L)
+#define MT_X MT(MOD_LALT, SE_X)
+#define MT_C MT(MOD_LGUI, SE_C)
+#define MT_V MT(MOD_LCTL, SE_V)
+#define MT_B MT(MOD_LSFT, SE_B)
+#define MT_N MT(MOD_RSFT, SE_N)
+#define MT_M MT(MOD_RCTL, SE_M)
+#define MT_COMM MT(MOD_RGUI, SE_COMM)
+#define MT_DOT MT(MOD_RALT, SE_DOT)
 
 #define QWERTY PDF(_QWERTY)
 //#define COLEMAK PDF(_COLEMAK)
@@ -61,8 +61,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 // HOMEBREW QWERTY
 [_QWERTY] = LAYOUT_planck_grid(
     KC_ESC,  SE_Q,    SE_W,    SE_E,    SE_R,   SE_T,      SE_Y,    SE_U,   SE_I,    SE_O,    SE_P,      SE_ARNG,
-    KC_TAB,  SE_A,    MT_S,    MT_D,    MT_F,   MT_G,      MT_H,    MT_J,   MT_K,    MT_L,    SE_ODIA,   SE_ADIA,
-    KC_DEL,  SE_Z,    SE_X,    SE_C,    SE_V,   SE_B,      SE_N,    SE_M,   SE_COMM, SE_DOT,  SE_MINS,   SE_QUOT,
+    KC_TAB,  SE_A,    SE_S,    SE_D,    SE_F,   SE_G,      SE_H,    SE_J,   SE_K,    SE_L,    SE_ODIA,   SE_ADIA,
+    KC_DEL,  SE_Z,    MT_X,    MT_C,    MT_V,   MT_B,      MT_N,    MT_M,   MT_COMM, MT_DOT,  SE_MINS,   SE_QUOT,
     KC_BSPC, KC_NO,   KC_NO,   LOWER,   NAVSPC, NAVSPC,    MT_ENT,  MT_ENT, RAISE,   KC_NO,   SE_BSLS,   SE_ASTR
 ),
 
